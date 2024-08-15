@@ -12,7 +12,7 @@ concurrency: # prevent concurrent deploys doing strange things
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows
 
     steps:
      - uses: actions/checkout@v3
@@ -32,4 +32,4 @@ jobs:
       with:
         api_token: 0c12396776320b1956813e157afedb47
         cleanup: false
-        dist_dir: ./public
+        dist_dir: public
