@@ -1,0 +1,23 @@
+name: Deploy to neocities
+
+on:
+  push:
+    branches:
+      - main # Change to name of branch you're deploying from
+
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v1
+      with:
+        api_token: ${{0c12396776320b1956813e157afedb47}}
+        cleanup: false
+        dist_dir: public # Change to fold your site is in, it's set to the root by default
