@@ -1,0 +1,79 @@
+@font-face 
+{
+  font-family: "AkzidenzGrotesk-Bold";
+  src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
+  format("opentype");
+}  
+
+@font-face 
+{
+  font-family: "AkzidenzGrotesk-Regular";
+  src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
+  format("opentype");
+}
+
+
+:root
+{
+    --front: #53524a;
+    --back: #a2a196;
+    --boton: #8a8d4aff;
+    --md: 20px;
+}
+
+
+body, html {
+    font-family: "AkzidenzGrotesk-Regular";
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back);
+}
+
+.container {
+    text-align: center;
+}
+
+.language-option {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--front);
+    color: white;
+    text-decoration: none;
+    font-size: var(--md);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.language-option:hover {
+    background-color: var(--boton);
+}
+
+.flex-container
+{
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.img2
+{
+  width: 100%;
+ 
+}
+
+.caja 
+{     
+  text-align: center;
+  width: 100%;  
+}
+
+.c6
+{  
+text-align: center;
+justify-content: flex-end;
+}
