@@ -27,6 +27,32 @@ h2 {
     margin-bottom: 30px;
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio igual entre los botones */
+    align-items: center; /* Alinea los botones en el centro verticalmente */
+    gap: 10px; /* Espacio entre los botones (opcional) */
+    padding: 10px; /* Añade un padding alrededor de los botones */
+}
+
+.custom-button {
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    background-color: #f08a5d; /* Color de fondo de los botones */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    width: calc(25% - 10px);
+    text-align: center;
+    transition: background-color 0.3s ease-in-out; /* Transición suave para hover */
+}
+
+.custom-button:hover {
+    background-color: #b83b5e; /* Color al pasar el cursor */
+}
+
+
 .image-placeholder {
     width: 80%;
     height: 200px;
@@ -61,8 +87,14 @@ h2 {
     display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 600px) {
     .footer {
         display:block;
+    }
+
+    
+
+    .custom-button {
+        flex: 1 1 calc(50% - 10px);
     }
 }
