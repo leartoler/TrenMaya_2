@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Información</title>
+    <style>
+
+:root{
+    --bacalar_1:#f47b20;
+}
+
+body {
+    font-family: "AkzidenzGrotesk-Bold";
+    margin: 0;
+    padding: 0;
+    background-color: var(--bacalar_1); /* Color de fondo general */
+    color: #ffffff;
+}
+
+        
+        .gallery-container {
+            width: 80%;
+             margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            background-color: var(--bacalar_1); /* Color de fondo del contenedor #c8673d */
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery-item" onclick="openModal('modal1')">
+            <img src="C:\Users\viznu\OneDrive\Documents\Projects\TrenMaya_2\public\Imagenes\3d.png" alt="Imagen 1">
+        </div>
+        <div class="gallery-item" onclick="openModal('modal2')">
+            <img src="imagen2.jpg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('modal3')">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Título de la Imagen 1</h2>
+            <div class = "gallery-item">
+                 <img src="C:\Users\viznu\OneDrive\Documents\Projects\TrenMaya_2\public\Imagenes\3d.png" alt="Imagen 1">
+            </div>
+           
+            <p>Información detallada sobre la Imagen 1.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Título de la Imagen 2</h2>
+            <p>Información detallada sobre la Imagen 2.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Título de la Imagen 3</h2>
+            <p>Información detallada sobre la Imagen 3.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</body>
+</html>
