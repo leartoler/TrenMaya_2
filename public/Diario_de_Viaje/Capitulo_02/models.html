@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - VR orbit</title>
+  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<a-scene>
+      <a-assets>
+        <a-asset-item id="crate-obj" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.obj"></a-asset-item>
+        <a-asset-item id="crate-mtl" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.mtl"></a-asset-item>
+      </a-assets>
+       <a-entity
+            id="camera"
+            camera
+            look-controls     
+            position="0 0 5"
+            orbit-controls="
+                autoRotate: false;
+                target: #target;
+                enableDamping: true;
+                dampingFactor: 0.125;
+                rotateSpeed:0.08;
+                minDistance:3;
+                maxDistance:40;"
+            mouse-cursor="">
+        </a-entity>
+      <!--<a-entity camera="userHeight: 1.6" look-controls></a-entity>-->
+      
+        <a-entity id="target" obj-model="obj: #crate-obj; mtl: #crate-mtl" position="0 0 0"></a-entity>
+
+
+        <a-sky color="#000000"></a-sky>
+
+    </a-scene>
+<!-- partial -->
+  
+</body>
+</html>
