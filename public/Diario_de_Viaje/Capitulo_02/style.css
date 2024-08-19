@@ -88,6 +88,10 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    
+    .container {
+        width: 80%;
+    
     .footer {
         display:block;
     }
