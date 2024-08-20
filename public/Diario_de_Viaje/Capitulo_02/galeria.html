@@ -5,33 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería con Información</title>
     <style>
+         @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Bold";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
+        format("opentype");
+        }  
 
-:root{
-    --bacalar_1:#f47b20;
-}
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Regular";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
+        format("opentype");
+        }        
 
-body {
-    font-family: "AkzidenzGrotesk-Bold";
-    margin: 0;
-    padding: 0;
-    background-color: var(--bacalar_1); /* Color de fondo general */
+        :root{
+            --cap1_c:#a2a196;
+            --cap1_o: #f47b20;
+            --cap2_c:#a2a196;
+            --cap2_o:#a2a196;
+            --cap3_c:#a2a196;
+            --cap3_o:#a2a196;
+            --cap4_c:#a2a196;
+            --cap4_o:#a2a196;
+            --cap5_c:#a2a196;
+            --cap5_o:#a2a196;
+            --cap6_c:#a2a196;
+            --cap6_o:#a2a196;
+            --cap7_c:#a2a196;
+            --cap7_o:#a2a196;
+            --cap8_c:#a2a196;
+            --cap8_o:#a2a196;
+            --cap9_c:#a2a196;
+            --cap9_o:#a2a196;
+            --cap10_c:#a2a196;
+            --cap10_o:#a2a196; 
+            --front: #53524a;
+            --back: #a2a196;
+            --boton: #8a8d4aff;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            font-family: "AkzidenzGrotesk-Bold";
+            margin: 0;
+            padding: 0;
+            background-color: var(--cap1_o); /* Color de fondo general */    
     
-}
+        }  
 
-        
         .gallery-container {
             width: 80%;
-             margin: 50px auto;
+            margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--bacalar_1); /* Color de fondo del contenedor #c8673d */    
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            
+            background-color: var(--cap1_o); /* Color de fondo del contenedor #c8673d */    
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);            
             gap: 10px;
             padding: 20px;
         }
-
+       
         .gallery-item {
             overflow: hidden;
             border-radius: 10px;
@@ -64,6 +100,7 @@ body {
         }
 
         .modal-content {
+            font-family: 'AkzidenzGrotesk-Bold';
             background-color: #fefefe;
             margin: 15% auto;
             padding: 20px;
@@ -71,6 +108,7 @@ body {
             width: 80%;
             max-width: 600px;
             border-radius: 10px;
+
         }
 
         .close {
@@ -88,6 +126,7 @@ body {
         }
     </style>
 </head>
+
 <body>
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
@@ -107,8 +146,7 @@ body {
             <h2>Título de la Imagen 1</h2>
             <div class = "gallery-item">
                  <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
-            </div>
-           
+            </div>           
             <p>Información detallada sobre la Imagen 1.</p>
         </div>
     </div>
@@ -138,5 +176,6 @@ body {
             document.getElementById(modalId).style.display = "none";
         }
     </script>
+
 </body>
 </html>
