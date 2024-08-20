@@ -54,27 +54,41 @@
         }
 
         .modal {
-            display: none;
+
+            display: flex;
+           
+
+
+
+            opacity: 0;
+            visibility: hidden;
             position: fixed;
-            z-index: 1;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
             background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            z-index: 1;
         }
+
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto;
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
             border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
         }
 
         .close {
@@ -130,8 +144,7 @@
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
                             minDistance:3;
-                            maxDistance:40;"
-                        mouse-cursor="">
+                            maxDistance:40;">
                     </a-entity>
                     <a-entity id="target" obj-model="obj: #crate-obj; mtl: #crate-mtl" position="0 0 0"></a-entity>
                     <a-sky color="#000000"></a-sky>
@@ -158,13 +171,16 @@
         </div>
     </div>
 
+   
     <script>
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
+            const modal = document.getElementById(modalId);
+            modal.classList.add('show');
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
         }
     </script>
 </body>
