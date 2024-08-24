@@ -7,7 +7,7 @@
     <style>
         :root{
             --cap2_c:#4d8b83ff;
-            --cap2_o: #006e62ff;
+            --cap2_o:#006e62ff;
             --cap3_c:#c97e56ff;
             --cap3_o:#ba5328ff;
             --cap4_c:#c28786ff;
@@ -47,6 +47,7 @@
         body, html {
             font-family: "AkzidenzGrotesk-Regular";
             height: 100%;
+            padding: 0;
             margin: 0;
             display: grid;
             justify-content: center;
@@ -58,7 +59,7 @@
             text-align: center;
         }
 
-        .language-option {
+        .button {
             display: inline-block;
             margin: 20px;
             padding: 10px 20px;
@@ -70,16 +71,40 @@
             transition: background-color 0.3s;
         }
 
-        .language-option:hover {
-            background-color: var(--boton_2);
+        .button:hover {
+            background-color: var(--boton_2);    
         }
+        .img2
+        {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer { 
+            height: 60px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            display: none;
+        }
+
+        @media (max-width: 820px) {        
+             .footer {
+                display:block;
+            }
+        }
+
     </style>
 </head>
 <body>       
     <div class="container">
-        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_01/info_en.html" class="language-option">English</a>
-        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_02/menu_es" class="language-option">Español</a>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_01/info_en.html" class="button">English</a>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_02/menu_es" class="button">Español</a>
    
+    </div>
+    <div class="footer">	
+        <img src="https://trenmaya.neocities.org/Assets/footer_02.png" class="img2">
     </div>
 </body>
 </html>
