@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Carrillo Puerto - Frente 1, Tramo 6</title>
+    <style>
+        :root{
+            --cap2_c:#4d8b83ff;
+            --cap2_o: #006e62ff;
+            --cap3_c:#c97e56ff;
+            --cap3_o:#ba5328ff;
+            --cap4_c:#c28786ff;
+            --cap4_o:#992940ff;
+            --cap5_c:#e1bc88ff;
+            --cap5_o:#c7872aff;
+            --cap6_c:#4d9ca6ff;
+            --cap6_o:#00838cff;
+            --cap7_c:#ac5d72ff;
+            --cap7_o:#931a4eff;
+            --cap8_c:#816c8eff;
+            --cap8_o:#5f4471ff;
+            --cap9_c:#6d7ea4ff;
+            --cap9_o:#335d8dff;
+            --front: #53524a;
+            --back: #a2a196;
+            --boton_2: #00576E;
+            --boton_3: #BA6E29;
+            --boton_4: #FFC4D0;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Bold";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
+        format("opentype");
+        }  
+
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Regular";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
+        format("opentype");
+        }    
+
+        body, html {
+            font-family: "AkzidenzGrotesk-Regular";
+            height: 100%;
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cap4_c);
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .language-option {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: var(--cap4_o);
+            color: white;
+            text-decoration: none;
+            font-size: var(--md);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .language-option:hover {
+            background-color: var(--boton_4);
+        }
+    </style>
+</head>
+<body>       
+    <div class="container">
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_01/info_en.html" class="language-option">English</a>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_04/menu_es" class="language-option">Español</a>
+   
+    </div>
+</body>
+</html>
+
