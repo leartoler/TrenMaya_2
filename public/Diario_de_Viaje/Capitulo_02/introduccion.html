@@ -6,26 +6,28 @@
     <title>Bacalar - Frente 1, Tramo 6</title>
     <style>
         :root{
-            --cap1_c:
-            --cap1_o:
-            --cap2_c:
-            --cap2_o:
-            --cap3_c:
-            --cap3_o:
-            --cap4_c:
-            --cap4_o:
-            --cap5_c:
-            --cap5_o:
-            --cap6_c:
-            --cap6_o:
-            --cap7_c:
-            --cap7_o:
-            --cap8_c:
-            --cap8_o:
-            --cap9_c:
-            --cap9_o:
-            --cap10_c:
-            --cap10_o:      
+            --cap2_c:#4d8b83ff;
+            --cap2_o: #006e62ff;
+            --cap3_c:#c97e56ff;
+            --cap3_o:#ba5328ff;
+            --cap4_c:#c28786ff;
+            --cap4_o:#992940ff;
+            --cap5_c:#e1bc88ff;
+            --cap5_o:#c7872aff;
+            --cap6_c:#4d9ca6ff;
+            --cap6_o:#00838cff;
+            --cap7_c:#ac5d72ff;
+            --cap7_o:#931a4eff;
+            --cap8_c:#816c8eff;
+            --cap8_o:#5f4471ff;
+            --cap9_c:#6d7ea4ff;
+            --cap9_o:#335d8dff;
+            --front: #53524a;
+            --back: #a2a196;
+            --boton: #00576E;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
         }
         
         @font-face 
@@ -40,16 +42,7 @@
         font-family: "AkzidenzGrotesk-Regular";
         src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
         format("opentype");
-        }
-
-        :root
-        {
-            --front: #53524a;
-            --back: #a2a196;
-            --boton: #8a8d4aff;
-            --md: 20px;
-        }
-
+        }    
 
         body, html {
             font-family: "AkzidenzGrotesk-Regular";
@@ -58,7 +51,7 @@
             display: grid;
             justify-content: center;
             align-items: center;
-            background-color: var(--back);
+            background-color: var(--cap2_c);
         }
 
         .container {
@@ -69,7 +62,7 @@
             display: inline-block;
             margin: 20px;
             padding: 10px 20px;
-            background-color: var(--front);
+            background-color: var(--cap2_o);
             color: white;
             text-decoration: none;
             font-size: var(--md);
