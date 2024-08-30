@@ -5,6 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interactivo con Animación Idle</title>
     <style>
+        :root{
+    --cap2_c:#4d8b83ff;
+            --cap2_o: #006e62ff;
+            --cap3_c:#c97e56ff;
+            --cap3_o:#ba5328ff;
+            --cap4_c:#a6a698ff;
+            --cap4_o:#898948ff;
+            --cap5_c:#4d9ca6ff;
+            --cap5_o:#00838cff;
+            --cap6_c:#c28786ff;
+            --cap6_o:#992940ff;
+            --cap7_c:#ac5d72ff;
+            --cap7_o:#931a4eff;
+            --cap8_c:#e1bc88ff;
+            --cap8_o:#c7872aff;
+            --cap9_c:#816c8eff;
+            --cap9_o:#5f4471ff;
+            --cap10_c:#6d7ea4ff;
+            --cap10_o:#335d8dff;
+            --cap11_c:#8aa168ff;
+            --cap11_o:#60883bff;
+            --boton_2: #00576E;
+            --boton_3: #BA6E29;
+            --boton_4: #35352D;
+            --boton_5: #123537;
+            --boton_6: #FFC4D0;
+            --boton_7: #3F202E;
+            --boton_8: #725D3E;
+            --boton_9: #BBABC5;
+            --boton_10: #262E37;
+            --boton_11: #C1DCA8;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+}
+
+@font-face 
+{
+  font-family: "AkzidenzGrotesk-Bold";
+  src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf") format("opentype");
+} 
+
+@font-face 
+{
+  font-family: "AkzidenzGrotesk-Regular";
+  src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf") format("opentype");
+}
+
+h2 {
+    font-family: "AkzidenzGrotesk-Bold";
+    font-size: var(--lg);
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "AkzidenzGrotesk-Regular";
+    font-size: var(--lg);
+    margin-bottom: 10px;
+}
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /* Estilo para cambiar el cursor al pasar sobre los puntos interactivos */
         area {
             cursor: pointer; /* Cambia el cursor a una mano */
@@ -59,13 +157,14 @@
         /* Estilo de los puntos animados */
         .animated-point-cen {
             position: absolute;
-            width: 10%;
-            height: 10%;
+            width: 15%;
+            height: 15%;
             background-image: url("https://trenmaya.neocities.org/Assets/iconos/iconos-12.svg");
             background-size: cover;
             background-position: center;
             border-radius: 50%;
             transform: translate(-50%, -50%);
+            transform-origin: center;
             transition: transform 0.3s ease;
         }
 
@@ -78,6 +177,7 @@
             background-position: center;
             border-radius: 50%;
             transform: translate(-50%, -50%);
+            transform-origin: center;
             transition: transform 0.3s ease;
         }
 
@@ -85,15 +185,18 @@
 
         /* Animación de rebote continuo (idle) */
         .animated-point-cen.idle {
+            transform-origin: center;
             animation: idle-bounce 2s infinite alternate ease-in-out;
         }
 
         .animated-point-cal.idle {
-            animation: idle-bounce 1s infinite alternate ease-in-out;
+            transform-origin: center;
+            animation: idle-bounce 2s infinite alternate ease-in-out;
         }
 
         @keyframes idle-bounce {
             0% {
+                
                 transform: translate(-50%, -50%) scale(1);
             }
             100% {
@@ -118,8 +221,8 @@
         <img src="https://trenmaya.neocities.org/Assets/mapa.png" usemap="#mapa" alt="Mapa Interactivo" style="width: 100%; height: 100%;" id="mapa-imagen">
         
         <!-- Puntos animados -->
-        <div class="animated-point-cen idle" style="left: 10%; top: 20%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>
-        <div class="animated-point-cal idle" style="left: 10%; top: 40%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>
+        <div class="animated-point-cen idle" style="left: 25%; top: 82%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>
+        <!-- <div class="animated-point-cal idle" style="left: 10%; top: 40%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div> -->
         <!-- Agrega más puntos según sea necesario -->
     </div>
 
@@ -171,14 +274,18 @@
         const urlParams = new URLSearchParams(window.location.search);
         const pageType = urlParams.get("pageType");
         
+        
         const popupElement = document.querySelector(".popup");
-
+        const rootSyles = getComputedStyle(document.documentElement);
+        let backgroundColor;
         if (pageType === "cap5") {
-            popupElement.style.backgroundColor="red";
+            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
         }
         else if (pageType === "cap6"){
-            popupElement.style.backgroundColor="lightgreen";
+            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
         }
+
+        popupElement.style.backgroundColor = backgroundColor;
 
 
 
