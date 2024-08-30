@@ -168,16 +168,20 @@
         });
 
         
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageType = urlParams.get("pageType");
+        
+        const popupElement = document.querySelector(".popup");
 
-        if (pageType === "cap5"){
-            document.body.style.popup.background.color = "red";
-        } else if (pageType === "https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_05/menu_es.html"){
-            document.body.style.popup.background.color = "lightgreen";
+        if (pageType === "cap5") {
+            popupElement.style.backgroundColor="red";
+        }
+        else if (pageType === "cap6"){
+            popupElement.style.backgroundColor="lightgreen";
         }
 
 
 
-
-    </script>
+        </script>
 </body>
 </html>
