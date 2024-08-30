@@ -52,9 +52,11 @@
         /* Estilo de los puntos animados */
         .animated-point {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgb(161, 172, 68);
+            width: 50px;
+            height: 50px;
+            background-image: url("https://trenmaya.neocities.org/Assets/iconos/iconos-12.svg");
+            background-size: cover;
+            background-position: center;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             transition: transform 0.3s ease;
@@ -92,7 +94,7 @@
         
         <!-- Puntos animados -->
         <div class="animated-point idle" style="left: 10%; top: 20%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>
-        <div class="animated-point" style="left: 20%; top: 30%;" data-lugar="Playa del Carmen" onclick="mostrarInfo('Playa del Carmen')"></div>
+        
         <!-- Agrega más puntos según sea necesario -->
     </div>
 
