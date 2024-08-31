@@ -104,7 +104,7 @@ h2 {
 }
 
 .image-placeholder {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
@@ -154,7 +154,7 @@ h2 {
 
 @media (max-width: 820px) {        
     .container {
-        width: 100%;  
+        width: 80%;  
     }
     
     .custom-button {
