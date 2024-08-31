@@ -154,7 +154,7 @@ h2 {
 
 @media (max-width: 820px) {        
     .container {
-        width: 100%;  
+        width: 80%;  
     }
     
     .custom-button {
