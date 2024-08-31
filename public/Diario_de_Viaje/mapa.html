@@ -145,8 +145,8 @@ p {
 
         .animated-point-playcar {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 15%;
+            height: 15%;
             background-image: url("https://trenmaya.neocities.org/Assets/iconos/playcar.svg");
             background-size: cover;
             background-position: center;
@@ -282,7 +282,7 @@ p {
         
         
         
-        .animated-point-ptmor.idle {
+        .animated-point-ptomor.idle {
             transform-origin: center;
             animation: idle-bounce 2s infinite alternate ease-in-out;
         }
@@ -337,7 +337,7 @@ p {
                 transform: translate(-50%, -50%) scale(1);
             }
             100% {
-                transform: translate(-55%, -55%) scale(1.3);
+                transform: translate(-50%, -50%) scale(1.15);
             }
         }
 
@@ -358,20 +358,20 @@ p {
         <img src="https://trenmaya.neocities.org/Assets/mapa.png" usemap="#mapa" alt="Mapa Interactivo" style="width: 100%; height: 100%;" id="mapa-imagen">
         
         <!-- Puntos animados -->
-        <div class="animated-point-ptmor idle" style="left: 25%; top: 82%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>
-        <div class="animated-point-playcar idle" style="left: 25%; top: 82%;" data-lugar="Playa del Carmen" onclick="mostrarInfo('Playa del Carmen')"></div>
-        <div class="animated-point-tul idle" style="left: 25%; top: 82%;" data-lugar="Tulum" onclick="mostrarInfo('Tulum')"></div>
-        <div class="animated-point-tula idle" style="left: 25%; top: 82%;" data-lugar="Tulum Aeropuerto" onclick="mostrarInfo('Tulum Aeropuerto')"></div>
-        <div class="animated-point-fcp idle" style="left: 25%; top: 82%;" data-lugar="Felipe Carrillo Puerto" onclick="mostrarInfo('PFelipe Carrillo Puerto')"></div>
-        <div class="animated-point-lim idle" style="left: 25%; top: 82%;" data-lugar="Limones" onclick="mostrarInfo('Limones')"></div>
-        <div class="animated-point-bac idle" style="left: 25%; top: 82%;" data-lugar="Bacalar" onclick="mostrarInfo('Bacalar')"></div>
+        <div class="animated-point-ptomor idle" style="left: 82%; top: 26%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div>        
         <div class="animated-point-chet idle" style="left: 63%; top: 87%;" data-lugar="Chetumal Aeropuerto" onclick="mostrarInfo('Chetumal Aeropuerto')"></div>
-        <div class="animated-point-nico idle" style="left: 25%; top: 82%;" data-lugar="Nicolas Bravo" onclick="mostrarInfo('Nicolas Bravo')"></div>
-        <div class="animated-point-xpu idle" style="left: 25%; top: 82%;" data-lugar="Xpujil" onclick="mostrarInfo('Xpujil')"></div>
-        <div class="animated-point-cal idle" style="left: 25%; top: 82%;" data-lugar="Calakmul" onclick="mostrarInfo('Calakmul')"></div>
+        <div class="animated-point-playcar idle" style="left: 79%; top: 31%;" data-lugar="Playa del Carmen" onclick="mostrarInfo('Playa del Carmen')"></div>
+        <div class="animated-point-tul idle" style="left: 75%; top: 37%;" data-lugar="Tulum" onclick="mostrarInfo('Tulum')"></div>
+        <div class="animated-point-tula idle" style="left: 72%; top: 43%;" data-lugar="Tulum Aeropuerto" onclick="mostrarInfo('Tulum Aeropuerto')"></div>
+        <div class="animated-point-fcp idle" style="left: 66.5%; top: 57.5%;" data-lugar="Felipe Carrillo Puerto" onclick="mostrarInfo('Felipe Carrillo Puerto')"></div>
+        <div class="animated-point-lim idle" style="left: 65%; top: 68%;" data-lugar="Limones" onclick="mostrarInfo('Limones')"></div>
+        <div class="animated-point-bac idle" style="left: 61%; top: 78%;" data-lugar="Bacalar" onclick="mostrarInfo('Bacalar')"></div>  
+        <div class="animated-point-nico idle" style="left: 53%; top: 88%;" data-lugar="Nicolas Bravo" onclick="mostrarInfo('Nicolas Bravo')"></div>
+        <div class="animated-point-xpu idle" style="left: 40%; top: 85%;" data-lugar="Xpujil" onclick="mostrarInfo('Xpujil')"></div>
+        <div class="animated-point-cal idle" style="left: 32.5%; top: 86%;" data-lugar="Calakmul" onclick="mostrarInfo('Calakmul')"></div>
         <div class="animated-point-cen idle" style="left: 25%; top: 82%;" data-lugar="Centenario" onclick="mostrarInfo('Centenario')"></div>
-        <!-- <div class="animated-point-cal idle" style="left: 10%; top: 40%;" data-lugar="Puerto Morelos" onclick="mostrarInfo('Puerto Morelos')"></div> -->
-        <!-- Agrega más puntos según sea necesario -->
+      
+      
     </div>
 
     <!-- Fondo oscuro del popup -->
@@ -462,12 +462,10 @@ p {
         if (pageType === "cap12") {
             backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
         }
-
         popupElement.style.backgroundColor = backgroundColor;
 
 
-
-        </script>
+    </script>
 </body>
 </html>
 
