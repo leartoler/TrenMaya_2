@@ -52,7 +52,7 @@
             font-family: "AkzidenzGrotesk-Bold";
             margin: 0;
             padding: 0;
-            background-color: var(--cap2_c); /* Color de fondo general */    
+            background-color: var(--cap3_c); /* Color de fondo general */    
     
         }  
 
@@ -61,7 +61,7 @@
             margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--cap2_o); /* Color de fondo del contenedor #c8673d */    
+            background-color: var(--cap3_o); /* Color de fondo del contenedor #c8673d */    
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);            
             gap: 10px;
@@ -69,6 +69,7 @@
         }
        
         .gallery-item {
+            align-items: center;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -130,7 +131,7 @@
 <body>
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+            <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/bacalar_pb/03.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
             <img src="imagen2.jpg" alt="Imagen 2">
@@ -143,11 +144,11 @@
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Título de la Imagen 1</h2>
+            <h2>Mayan clothes</h2>
             <div class = "gallery-item">
-                 <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+                 <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/bacalar_pb/03.jpg" alt="Imagen 1">
             </div>           
-            <p>Información detallada sobre la Imagen 1.</p>
+            <p>Records indicate that the Maya dressed differently depending on their occupation, economic status, and even the occasion. Their attire ranged from simple loincloths to capes, cloaks, dresses, huipils, and skirts.</p>
         </div>
     </div>
 
