@@ -138,7 +138,7 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 5"
+                        position="0 0 2"
                         orbit-controls="
                             autoRotate: false;
                             target: #target;
@@ -149,10 +149,11 @@
                             maxDistance:40;">
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj1" position="0 0 0 "></a-entity>
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>
                     <!-- <a-entity id="target" obj-model="glb: #obj1" position="0 0 0"></a-entity> -->
                     <a-sky color="#ba5328"></a-sky>
 
-                    ba5328ff
+                    
                 </a-scene>
             </div>
 
