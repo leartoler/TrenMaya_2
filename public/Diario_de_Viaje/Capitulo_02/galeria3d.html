@@ -8,21 +8,68 @@
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
     <style>
         :root {
-            --bacalar_1: #f47b20;
+            --cap2_c:#4d8b83ff;
+            --cap2_o: #006e62ff;
+            --cap3_c:#c97e56ff;
+            --cap3_o:#ba5328ff;
+            --cap4_c:#c28786ff;
+            --cap4_o:#992940ff;
+            --cap5_c:#e1bc88ff;
+            --cap5_o:#c7872aff;
+            --cap6_c:#4d9ca6ff;
+            --cap6_o:#00838cff;
+            --cap7_c:#ac5d72ff;
+            --cap7_o:#931a4eff;
+            --cap8_c:#816c8eff;
+            --cap8_o:#5f4471ff;
+            --cap9_c:#6d7ea4ff;
+            --cap9_o:#335d8dff;
+            --front: #53524a;
+            --back: #a2a196;
+            --boton_2: #00576E;
+            --boton_3: #BA6E29;
+            --borde_2: #29BAA7;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
         }
+
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Bold";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
+        format("opentype");
+        }  
+
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Regular";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
+        format("opentype");
+        } 
 
         body {
             font-family: "AkzidenzGrotesk-Bold";
+            
             margin: 0;
             padding: 0;
-            background-color: var(--bacalar_1); /* Color de fondo general */
+            background-color: var(--cap3_c); /* Color de fondo general */
+        }
+
+        h2{
+            color: whitesmoke;
+        }
+
+        p{
+            color: whitesmoke;
         }
 
         #aframe-container {
             width: 100%; /* Ancho de la ventana */
             height: 56.25vw; /* Altura de la ventana */
             max-height: 80vh;
-            border: 2px solid #000; /* Opcional: borde para la ventana */
+            border-radius: 10px;
+            border: 2px solid var(--borde_2); /* Opcional: borde para la ventana */
             overflow: hidden;
         }
 
@@ -31,7 +78,7 @@
             margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--bacalar_1); /* Color de fondo del contenedor #c8673d */
+            background-color: var(--cap3_o); /* Color de fondo del contenedor #c8673d */
             gap: 10px;
             padding: 20px;
         }
@@ -83,7 +130,7 @@
 
 
         .modal-content {
-            background-color: #fefefe;
+            background-color: var(--cap3_c);
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
@@ -110,7 +157,7 @@
 
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/01.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
             <img src="imagen2.jpg" alt="Imagen 2">
@@ -120,23 +167,25 @@
         </div>
     </div>
 
+    
+
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Título de la Imagen 1</h2>
+            <h2>Figurilla</h2>
 
             <div id="aframe-container">
                 <!-- Escena A-Frame dentro del contenedor -->
-                <a-scene embedded>
+                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
-                        <a-asset-item id="crate-obj" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.obj"></a-asset-item>
-                        <a-asset-item id="crate-mtl" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.mtl"></a-asset-item>
+                        <a-asset-item id="obj1" src="https://trenmaya.neocities.org/3d/01.glb"></a-asset-item>
+                        
                     </a-assets>
                     <a-entity
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 5"
+                        position="0 0 2"
                         orbit-controls="
                             autoRotate: false;
                             target: #target;
@@ -146,12 +195,16 @@
                             minDistance:3;
                             maxDistance:40;">
                     </a-entity>
-                    <a-entity id="target" obj-model="obj: #crate-obj; mtl: #crate-mtl" position="0 0 0"></a-entity>
-                    <a-sky color="#000000"></a-sky>
+                    <a-entity id="target" gltf-model="#obj1" position="0 -2 0"></a-entity>
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>
+                    <!-- <a-entity id="target" obj-model="glb: #obj1" position="0 0 0"></a-entity> -->
+                    <a-sky color="#ba5328"></a-sky>
+
+                    
                 </a-scene>
             </div>
 
-            <p>Información detallada sobre la Imagen 1.</p>
+            <p>Figurilla antropomorfa.</p>
         </div>
     </div>
 
@@ -185,5 +238,17 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
