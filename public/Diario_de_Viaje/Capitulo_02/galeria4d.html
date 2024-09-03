@@ -120,8 +120,6 @@
         </div>
     </div>
 
-    
-
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
@@ -129,16 +127,16 @@
 
             <div id="aframe-container">
                 <!-- Escena A-Frame dentro del contenedor -->
-                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
+                <a-scene embedded>
                     <a-assets>
-                        <a-asset-item id="obj1" src="https://trenmaya.neocities.org/3d/01.glb"></a-asset-item>
-                        
+                        <a-asset-item id="crate-obj" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.obj"></a-asset-item>
+                        <a-asset-item id="crate-mtl" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/assets/models/crate/crate.mtl"></a-asset-item>
                     </a-assets>
                     <a-entity
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 2"
+                        position="0 0 5"
                         orbit-controls="
                             autoRotate: false;
                             target: #target;
@@ -148,12 +146,8 @@
                             minDistance:3;
                             maxDistance:40;">
                     </a-entity>
-                    <a-entity id="target" gltf-model="#obj1" position="0 -2 .1 "></a-entity>
-                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>
-                    <!-- <a-entity id="target" obj-model="glb: #obj1" position="0 0 0"></a-entity> -->
-                    <a-sky color="#ba5328"></a-sky>
-
-                    
+                    <a-entity id="target" obj-model="obj: #crate-obj; mtl: #crate-mtl" position="0 0 0"></a-entity>
+                    <a-sky color="#000000"></a-sky>
                 </a-scene>
             </div>
 
