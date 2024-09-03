@@ -165,17 +165,12 @@
         <div class="gallery-item" onclick="openModal('modal3')">
             <img src="https://trenmaya.neocities.org/Imagenes/3d_front/03.jpg" alt="Imagen 3">
         </div>
-        <div class="gallery-item" onclick="openModal('modal3')">
+        <div class="gallery-item" onclick="openModal('modal4')">
             <img src="https://trenmaya.neocities.org/Imagenes/3d_front/04.jpg" alt="Imagen 3">
         </div>
-        <div class="gallery-item" onclick="openModal('modal3')">
+        <div class="gallery-item" onclick="openModal('modal5')">
             <img src="https://trenmaya.neocities.org/Imagenes/3d_front/05.jpg" alt="Imagen 3">
         </div>
-      
-
-
-
-
     </div>
 
     
@@ -184,13 +179,10 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
             <h2>Figurilla</h2>
-
-            <div id="aframe-container">
-                <!-- Escena A-Frame dentro del contenedor -->
+            <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
-                        <a-asset-item id="obj1" src="https://trenmaya.neocities.org/3d/01.glb"></a-asset-item>
-                        
+                        <a-asset-item id="obj1" src="https://trenmaya.neocities.org/3d/01.glb"></a-asset-item>             
                     </a-assets>
                     <a-entity
                         id="camera"
@@ -206,15 +198,11 @@
                             minDistance:3;
                             maxDistance:40;">
                     </a-entity>
-                    <a-entity id="target" gltf-model="#obj1" position="0 -2 0"></a-entity>
-                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>
-                    <!-- <a-entity id="target" obj-model="glb: #obj1" position="0 0 0"></a-entity> -->
-                    <a-sky color="#ba5328"></a-sky>
-
-                    
+                    <a-entity id="target" gltf-model="#obj1" position="0 -2 0"></a-entity>               
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#ba5328"></a-sky>                    
                 </a-scene>
             </div>
-
             <p>Figurilla antropomorfa.</p>
         </div>
     </div>
@@ -222,18 +210,138 @@
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Título de la Imagen 2</h2>
-            <p>Información detallada sobre la Imagen 2.</p>
+            <h2>Metate</h2>
+            <div id="aframe-container">              
+                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
+                    <a-assets>
+                        <a-asset-item id="obj2" src="https://trenmaya.neocities.org/3d/02.glb"></a-asset-item>             
+                    </a-assets>
+                    <a-entity
+                        id="camera"
+                        camera
+                        look-controls
+                        position="0 0 2"
+                        orbit-controls="
+                            autoRotate: false;
+                            target: #target;
+                            enableDamping: true;
+                            dampingFactor: 0.125;
+                            rotateSpeed:0.08;
+                            minDistance:3;
+                            maxDistance:40;">
+                    </a-entity>
+                    <a-entity id="target" gltf-model="#obj2" position="0 -2 0"></a-entity>               
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#ba5328"></a-sky>                    
+                </a-scene>
+            </div>
+            <p>Metate de Basalto</p>
         </div>
     </div>
 
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Título de la Imagen 3</h2>
-            <p>Información detallada sobre la Imagen 3.</p>
+            <h2>Figurilla</h2>
+            <div id="aframe-container">              
+                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
+                    <a-assets>
+                        <a-asset-item id="obj3" src="https://trenmaya.neocities.org/3d/03.glb"></a-asset-item>             
+                    </a-assets>
+                    <a-entity
+                        id="camera"
+                        camera
+                        look-controls
+                        position="0 0 2"
+                        orbit-controls="
+                            autoRotate: false;
+                            target: #target;
+                            enableDamping: true;
+                            dampingFactor: 0.125;
+                            rotateSpeed:0.08;
+                            minDistance:3;
+                            maxDistance:40;">
+                    </a-entity>
+                    <a-entity id="target" gltf-model="#obj3" position="0 -2 0"></a-entity>               
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#ba5328"></a-sky>                    
+                </a-scene>
+            </div>
+            <p>Plato con motivo zoomorfo</p>
         </div>
     </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Plato polícromo</h2>
+            <div id="aframe-container">              
+                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
+                    <a-assets>
+                        <a-asset-item id="obj4" src="https://trenmaya.neocities.org/3d/04.glb"></a-asset-item>             
+                    </a-assets>
+                    <a-entity
+                        id="camera"
+                        camera
+                        look-controls
+                        position="0 0 2"
+                        orbit-controls="
+                            autoRotate: false;
+                            target: #target;
+                            enableDamping: true;
+                            dampingFactor: 0.125;
+                            rotateSpeed:0.08;
+                            minDistance:3;
+                            maxDistance:40;">
+                    </a-entity>
+                    <a-entity id="target" gltf-model="#obj4" position="0 -2 0"></a-entity>               
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#ba5328"></a-sky>                    
+                </a-scene>
+            </div>
+            <p>Plato polícromo</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Figurilla</h2>
+            <div id="aframe-container">              
+                <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
+                    <a-assets>
+                        <a-asset-item id="obj5" src="https://trenmaya.neocities.org/3d/05.glb"></a-asset-item>             
+                    </a-assets>
+                    <a-entity
+                        id="camera"
+                        camera
+                        look-controls
+                        position="0 0 2"
+                        orbit-controls="
+                            autoRotate: false;
+                            target: #target;
+                            enableDamping: true;
+                            dampingFactor: 0.125;
+                            rotateSpeed:0.08;
+                            minDistance:3;
+                            maxDistance:40;">
+                    </a-entity>
+                    <a-entity id="target" gltf-model="#obj5" position="0 -2 0"></a-entity>               
+                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#ba5328"></a-sky>                    
+                </a-scene>
+            </div>
+            <p>Vasija de cerámica</p>
+        </div>
+    </div>
+
+
+
+    
+
+    
+
+
 
    
     <script>
