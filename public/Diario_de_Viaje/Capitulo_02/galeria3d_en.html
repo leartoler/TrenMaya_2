@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería con Información</title>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
     <style>
         :root {
@@ -54,7 +54,7 @@
             
             margin: 0;
             padding: 0;
-            background-color: var(--cap3_c); /* Color de fondo general */
+            background-color: var(--cap2_c); /* Color de fondo general */
         }
 
         h2{
@@ -151,6 +151,8 @@
 </head>
 <body>
 
+   
+
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
             <img src="https://trenmaya.neocities.org/Imagenes/3d_front/01.jpg" alt="Imagen 1">
@@ -184,17 +186,17 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 2"
+                        position="0 0 0"
                         orbit-controls="
                             autoRotate: false;
-                            target: #target1;
+                            target: #target;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
                             minDistance:3;
                             maxDistance:40;">
                     </a-entity>
-                    <a-entity id="target1" gltf-model="#obj1" position="0 -2 0"></a-entity>               
+                    <a-entity id="target" gltf-model="#obj1" position="0 -1 -3"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
                     <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
@@ -216,7 +218,7 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 2"
+                        position="0 0 0"
                         orbit-controls="
                             autoRotate: false;
                             target: #target2;
@@ -226,7 +228,7 @@
                             minDistance:3;
                             maxDistance:40;">
                     </a-entity>
-                    <a-entity id="target2" gltf-model="#obj2" position="0 -2 0"></a-entity>               
+                    <a-entity id="target2" gltf-model="#obj2" position="0 -2 -3"></a-entity>               
                     <a-entity light="color: white; type: ambient; intensity: -.1" data-aframe-default-light="" aframe-injected=""></a-entity>             
                     <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
@@ -248,17 +250,17 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 4 70"
+                        position="0 0 0"
                         orbit-controls="
                             autoRotate: false;
-                            target: #target;
+                            target: #target3;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:3;
-                            maxDistance:40;">
+                            minDistance:1;
+                            maxDistance:1;">
                     </a-entity>
-                    <a-entity id="target" gltf-model="#obj3" position="-7 -7 -90"></a-entity>               
+                    <a-entity id="target3"  gltf-model="#obj3" position="0 2 -3"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
                     <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
@@ -343,3 +345,10 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
