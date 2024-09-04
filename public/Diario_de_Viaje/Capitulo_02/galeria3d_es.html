@@ -28,7 +28,8 @@
             --back: #a2a196;
             --boton_2: #00576E;
             --boton_3: #BA6E29;
-            --borde_2: #29BAA7;
+            --borde_2: #C36941;
+            --borde_3: #29BAA7;
             --sm: 14px;
             --md: 16px;
             --lg: 18px;
@@ -78,7 +79,7 @@
             margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--cap3_o); /* Color de fondo del contenedor #c8673d */
+            background-color: var(--cap2_o); /* Color de fondo del contenedor #c8673d */
             gap: 10px;
             padding: 20px;
         }
@@ -101,12 +102,7 @@
         }
 
         .modal {
-
             display: flex;
-           
-
-
-
             opacity: 0;
             visibility: hidden;
             position: fixed;
@@ -130,7 +126,7 @@
 
 
         .modal-content {
-            background-color: var(--cap3_c);
+            background-color: var(--cap2_c);
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
@@ -139,7 +135,7 @@
         }
 
         .close {
-            color: #aaa;
+            color:var(--boton_2);
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -200,7 +196,7 @@
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj1" position="0 -2 0"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#ba5328"></a-sky>                    
+                    <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
             <p>Figurilla antropomorfa.</p>
@@ -232,7 +228,7 @@
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj2" position="0 -2 0"></a-entity>               
                     <a-entity light="color: white; type: ambient; intensity: -.1" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#ba5328"></a-sky>                    
+                    <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
             <p>Metate de Basalto</p>
@@ -242,7 +238,7 @@
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Figurilla</h2>
+            <h2>Plato</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -259,12 +255,12 @@
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:3;
-                            maxDistance:10;">
+                            minDistance:-2;
+                            maxDistance:2;">
                     </a-entity>
-                    <a-entity id="target" gltf-model="#obj3" position="0 0 0"></a-entity>               
+                    <a-entity id="target" gltf-model="#obj3" position="0 0 2"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#ba5328"></a-sky>                    
+                    <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
             <p>Plato con motivo zoomorfo</p>
@@ -296,7 +292,7 @@
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj4" position="0 0 0"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#ba5328"></a-sky>                    
+                    <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
             <p>Plato polícromo</p>
@@ -306,7 +302,7 @@
     <div id="modal5" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal5')">&times;</span>
-            <h2>Figurilla</h2>
+            <h2>Vasija</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -324,26 +320,16 @@
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
                             minDistance:3;
-                            maxDistance:40;">
+                            maxDistance:10;">
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj5" position="0 0 0"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#ba5328"></a-sky>                    
+                    <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
             <p>Vasija de cerámica</p>
         </div>
     </div>
-
-
-
-    
-
-    
-
-
-
-   
     <script>
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
