@@ -44,7 +44,7 @@ h2 {
     width: 60%;
     margin: 50px auto;
     text-align: center;
-    background-color: var(--cap6_c); /* Color de fondo del contenedor #c8673d */
+    background-color: var(--cap5_c); /* Color de fondo del contenedor #c8673d */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -64,7 +64,7 @@ h2 {
     box-sizing: border-box; 
     display: inline-block;
     padding: 10px 20px; /* Espaciado interno de los botones */
-    background-color: var(--cap6_o); /* Color de fondo de los botones */
+    background-color: var(--cap5_o); /* Color de fondo de los botones */
     color: white; /* Color del texto */
     border: none; /* Sin bordes */
     border-radius: 5px; /* Bordes redondeados */
