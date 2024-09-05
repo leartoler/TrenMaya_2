@@ -14,10 +14,10 @@
             --cap3_o:#ba5328ff;
             --cap4_c:#a6a698ff;
             --cap4_o:#898948ff;
-            --cap5_c:#4d9ca6ff;
-            --cap5_o:#00838cff;
-            --cap6_c:#c28786ff;
-            --cap6_o:#992940ff;
+            --cap6_c:#4d9ca6ff;
+            --cap6_o:#00838cff;
+            --cap65_c:#c28786ff;
+            --cap62_o:#992940ff;
             --cap7_c:#ac5d72ff;
             --cap7_o:#931a4eff;
             --cap8_c:#e1bc88ff;
@@ -62,7 +62,7 @@
             
             margin: 0;
             padding: 0;
-            background-color: var(--cap5_c); /* Color de fondo general */
+            background-color: var(--cap6_c); /* Color de fondo general */
         }
 
         h2{
@@ -78,7 +78,7 @@
             height: 56.25vw; /* Altura de la ventana */
             max-height: 80vh;
             border-radius: 10px;
-            border: 2px solid var(--borde_5); /* Opcional: borde para la ventana */
+            border: 2px solid var(--borde_6); /* Opcional: borde para la ventana */
             overflow: hidden;
         }
 
@@ -87,7 +87,7 @@
             margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--cap5_o); /* Color de fondo del contenedor #c8673d */
+            background-color: var(--cap6_o); /* Color de fondo del contenedor #c8673d */
             gap: 10px;
             padding: 20px;
         }
@@ -134,7 +134,7 @@
 
 
         .modal-content {
-            background-color: var(--cap5_c);
+            background-color: var(--cap6_c);
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
@@ -143,7 +143,7 @@
         }
 
         .close {
-            color:var(--boton_2);
+            color:var(--boton_6);
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -163,19 +163,19 @@
 
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_05/01.jpg" alt="Imagen 1">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_06/01.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_05/02.jpg" alt="Imagen 2">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_06/02.jpg" alt="Imagen 2">
         </div>
         <div class="gallery-item" onclick="openModal('modal3')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_05/03.jpg" alt="Imagen 3">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_06/03.jpg" alt="Imagen 3">
         </div>
         <div class="gallery-item" onclick="openModal('modal4')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_05/04.jpg" alt="Imagen 3">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_06/04.jpg" alt="Imagen 3">
         </div>
         <div class="gallery-item" onclick="openModal('modal5')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_05/05.jpg" alt="Imagen 3">
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_06/05.jpg" alt="Imagen 3">
         </div>
     </div>
 
@@ -184,11 +184,7 @@
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-<<<<<<< HEAD
             <h2>Figurine</h2>
-=======
-            <h2>Figurilla</h2>
->>>>>>> parent of 5269349 (Revert "cap_05")
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -213,11 +209,7 @@
                     <a-sky color="#00838c"></a-sky>                    
                 </a-scene>
             </div>
-<<<<<<< HEAD
             <p>Anthroporphic Figurine.</p>
-=======
-            <p>Figurilla antropomorfa.</p>
->>>>>>> parent of 5269349 (Revert "cap_05")
         </div>
     </div>
 
@@ -249,11 +241,7 @@
                     <a-sky color="#00838c"></a-sky>                    
                 </a-scene>
             </div>
-<<<<<<< HEAD
             <p>Limestine metate</p>
-=======
-            <p>Metate de Basalto</p>
->>>>>>> parent of 5269349 (Revert "cap_05")
         </div>
     </div>
 
@@ -285,22 +273,14 @@
                     <a-sky color="#00838c"></a-sky>                    
                 </a-scene>
             </div>
-<<<<<<< HEAD
             <p>Plate with zoomorphic design</p>
-=======
-            <p>Plato con motivo zoomorfo</p>
->>>>>>> parent of 5269349 (Revert "cap_05")
         </div>
     </div>
 
     <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal4')">&times;</span>
-<<<<<<< HEAD
             <h2>Polychrome plate</h2>
-=======
-            <h2>Plato polícromo</h2>
->>>>>>> parent of 5269349 (Revert "cap_05")
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -325,11 +305,7 @@
                     <a-sky color="#00838"></a-sky>                    
                 </a-scene>
             </div>
-<<<<<<< HEAD
             <p>Polychrome plate</p>
-=======
-            <p>Plato polícromo</p>
->>>>>>> parent of 5269349 (Revert "cap_05")
         </div>
     </div>
 
@@ -361,11 +337,7 @@
                     <a-sky color="#00838c"></a-sky>                    
                 </a-scene>
             </div>
-<<<<<<< HEAD
             <p>Ceramic Vessel</p>
-=======
-            <p>Vasija de cerámica</p>
->>>>>>> parent of 5269349 (Revert "cap_05")
         </div>
     </div>
     <script>
