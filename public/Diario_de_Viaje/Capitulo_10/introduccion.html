@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --cap2_c:#4d8b83ff; /*Chetumal*/
+            --cap2_o:#006e62ff; /*Chetumal*/
+            --cap10_c:#6d7ea4ff; /*Calakmul*/
+            --cap10_o:#335d8dff; /*CAlakmul*/
+            --boton_2:#6E2200;
+            --boton_10:#8C6C32;
+        }
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Bold";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
+        format("opentype");
+        }  
+        @font-face 
+        {
+        font-family: "AkzidenzGrotesk-Regular";
+        src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
+        format("opentype");
+        }  
+        body{
+            font-family: "AkzidenzGrotesk-Bold";
+
+        }
+        h1{
+            font-family:"AkzidenzGrotesk-Bold";
+            color: whitesmoke;            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height:100vh;
+            text-align: center;
+           vertical-align: middle;            
+        }
+        .top_area{
+            background-color: var(--cap2_c);
+            flex: 1;
+            padding: 10%;
+        }
+        .bottom_area{
+            background-color: var(--cap10_c);
+            flex: 1;
+            padding: 10%;
+        }
+        .button1 {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: var(--cap2_o);
+            color: white;
+            text-decoration: none;
+            font-size: var(--md);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }        
+        .button2 {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: var(--cap10_o);
+            color: white;
+            text-decoration: none;
+            font-size: var(--md);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button1:hover {
+            background-color: var(--boton_2);
+        }
+        .button2:hover {
+            background-color: var(--boton_10);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top_area">
+        <h1>Chetumal</h1>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_02/menu_en.html" class="button1">English</a>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_02/menu_es.html" class="button1">Español</a>   
+    </div>
+    <div class="bottom_area">
+        <h1>Calakmul</h1>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_010/menu_en.html" class="button2">English</a>
+        <a href="https://trenmaya.neocities.org/Diario_de_Viaje/Capitulo_010/menu_es.html" class="button2">Español</a>   
+    </div>
+</div>  
+</body>
+</html>
