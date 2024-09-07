@@ -64,6 +64,14 @@
             background-color: var(--cap2_c); /* Color de fondo general */    
         }  
 
+        h2{
+            color: whitesmoke;
+        }
+
+        p{
+            color: whitesmoke;
+        }
+
         .gallery-container {
             width: 90%;
             margin: 50px auto;
@@ -109,7 +117,7 @@
 
         .modal-content {
             font-family: 'AkzidenzGrotesk-Bold';
-            background-color: #fefefe;
+            background-color: var(--cap2_o);
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
@@ -120,7 +128,7 @@
         }
 
         .close {
-            color: #aaa;
+            color: var(--boton_2);
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -138,43 +146,37 @@
 <body>
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+            <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/01.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
-            <img src="imagen2.jpg" alt="Imagen 2">
-        </div>
-        <div class="gallery-item" onclick="openModal('modal3')">
-            <img src="imagen3.jpg" alt="Imagen 3">
+            <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/02.jpg" alt="Imagen 2">
         </div>
     </div>
 
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Título de la Imagen 1</h2>
+            <h2>Settlement</h2>
             <div class = "gallery-item">
-                 <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+                 <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/01.jpg" alt="Imagen 1">
             </div>           
-            <p>Información detallada sobre la Imagen 1.</p>
+            <p>There were several attemps to settle the area, but is wasn´t until 1989 that the modern city of Chetumal was founded under the nae Payo Obispo, in honor of the Bishop of Guatemala and Viceroy of New Spain.</p>
         </div>
     </div>
 
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Título de la Imagen 2</h2>
-            <p>Información detallada sobre la Imagen 2.</p>
+            <h2>Chetumal City</h2>
+        <div class = "gallery-item">
+                <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/02.jpg" alt="Imagen 2"
+            <div>
+                <p>The city of Chetumal has a boulevrd tahat runs along its bay, where you can admire its lighthouse. As you walk through its streets, you can find the Museum of Maya Culture, its markets, or the Government Palace, wich still retains its original architecture. 
+            </p>
+            </div>
+        </div>
         </div>
     </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Título de la Imagen 3</h2>
-            <p>Información detallada sobre la Imagen 3.</p>
-        </div>
-    </div>
-
     <script>
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";

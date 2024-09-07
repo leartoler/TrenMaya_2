@@ -5,84 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería con Información</title>
     <style>
-         @font-face 
-        {
+    @font-face {
         font-family: "AkzidenzGrotesk-Bold";
         src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Bold.otf")
         format("opentype");
         }  
 
-        @font-face 
-        {
+    @font-face {
         font-family: "AkzidenzGrotesk-Regular";
         src: url("https://trenmaya.neocities.org/Fonts/AkzidenzGrotesk-Regular.otf")
         format("opentype");
-        }        
+    }        
 
-        :root{
-            --cap2_c:#4d8b83ff;
-            --cap2_o: #006e62ff;
-            --cap3_c:#c97e56ff;
-            --cap3_o:#ba5328ff;
-            --cap4_c:#c28786ff;
-            --cap4_o:#992940ff;
-            --cap5_c:#e1bc88ff;
-            --cap5_o:#c7872aff;
-            --cap6_c:#4d9ca6ff;
-            --cap6_o:#00838cff;
-            --cap7_c:#ac5d72ff;
-            --cap7_o:#931a4eff;
-            --cap8_c:#816c8eff;
-            --cap8_o:#5f4471ff;
-            --cap9_c:#6d7ea4ff;
-            --cap9_o:#335d8dff;
-            --cap10_c:#8aa168ff;
-            --cap10_o:#60883bff;
-            --cap11_c:#a2a196;
-            --cap11_o:#a2a196; 
-            --front: #53524a;
-            --back: #a2a196;
-            --boton: #8a8d4aff;
-            --sm: 14px;
-            --md: 16px;
-            --lg: 18px;
-        }
+    :root{
+    --cap1_c:#a6a698ff; /*Puerto Morelos*/
+    --cap1_o:#898948ff; /*Puerto MOrelos*/            
+    --cap2_c:#4d8b83ff; /*Chetumal*/
+    --cap2_o:#006e62ff; /*Chetumal*/
+    --cap3_c:#c97e56ff; /*Bacalar*/
+    --cap3_o:#ba5328ff; /*Bacalar*/
+    --cap4_c:#c28786ff; /*FCP*/
+    --cap4_o:#992940ff; /*FCP*/
+    --cap5_c:#e1bc88ff; /*Limones*/
+    --cap5_o:#c7872aff; /*Limones */
+    --cap6_c:#4d9ca6ff; /*Tulum*/
+    --cap6_o:#00838cff; /*Tulum*/
+    --cap7_c:#ac5d72ff; /*Xpujil*/
+    --cap7_o:#931a4eff; /*Xpujil */
+    --cap8_c:#816c8eff; /*Kohunlich*/
+    --cap8_o:#5f4471ff; /*Kohunlich*/
+    --cap9_c:#8aa168ff; /*Centenario*/
+    --cap9_o:#60883bff; /*Centenario*/
+    --cap10_c:#6d7ea4ff; /*Calakmul*/
+    --cap10_o:#335d8dff; /*CAlakmul*/
+    --front:#53524a;
+    --back:#a2a196;
+    --boton_1:#69498A;
+    --boton_2:#6E2200;
+    --boton_3:#29BAA7;
+    --boton_4:#29993C;
+    --boton_5:#2A83C7;
+    --boton_6:#8C3900;
+    --boton_7:#1B941F;
+    --boton_8:#6A7043;
+    --boton_9:#7F3A87;
+    --boton_10:#8C6C32;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    }
 
-        body {
-            font-family: "AkzidenzGrotesk-Bold";
-            margin: 0;
-            padding: 0;
-            background-color: var(--cap2_c); /* Color de fondo general */    
-    
+    body {
+        font-family: "AkzidenzGrotesk-Bold";
+        margin: 0;
+        padding: 0;
+        background-color: var(--cap2_c); /* Color de fondo general */    
         }  
 
-        .gallery-container {
-            width: 90%;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--cap2_o); /* Color de fondo del contenedor #c8673d */    
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);            
-            gap: 10px;
-            padding: 20px;
-        }
-       
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    h2{
+        color: whitesmoke;
+    }
+
+    p{
+        color: whitesmoke;
+    }
+
+    .gallery-container {
+        width: 90%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background-color: var(--cap2_o); /* Color de fondo del contenedor #c8673d */    
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);            
+        gap: 10px;
+        padding: 20px;
+    }       
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease-in-out;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.05);
+    .gallery-item img:hover {
+            Transform: scale(1.05);
         }
 
         .modal {
@@ -101,7 +113,7 @@
 
         .modal-content {
             font-family: 'AkzidenzGrotesk-Bold';
-            background-color: #fefefe;
+            background-color: var(--cap2_o);
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
@@ -112,7 +124,7 @@
         }
 
         .close {
-            color: #aaa;
+            color: var(--boton_2);
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -130,43 +142,38 @@
 <body>
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+            <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/01.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
-            <img src="imagen2.jpg" alt="Imagen 2">
-        </div>
-        <div class="gallery-item" onclick="openModal('modal3')">
-            <img src="imagen3.jpg" alt="Imagen 3">
+            <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/02.jpg" alt="Imagen 2">
         </div>
     </div>
 
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Título de la Imagen 1</h2>
+            <h2>Settlement</h2>
             <div class = "gallery-item">
-                 <img src="https://trenmaya.neocities.org/Imagenes/3d.png" alt="Imagen 1">
+                 <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/01.jpg" alt="Imagen 1">
             </div>           
-            <p>Información detallada sobre la Imagen 1.</p>
+            <p>Hubieron varios intentos por poblar la zona, pero fue hasta 1898 que se fundó la ciudad contemporánea de Chetumal bajo el nombre de Payo Obispo, en honor al obispo de Guatemla ay virrey de la Nueva España.</p>
         </div>
     </div>
 
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Título de la Imagen 2</h2>
-            <p>Información detallada sobre la Imagen 2.</p>
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Chetumal City</h2>
+            <div class = "gallery-item">
+                    <img src="https://trenmaya.neocities.org/Imagenes/Capitulos/Chetumal/02.jpg" alt="Imagen 2">
+                <div>
+                    <p>La ciudad de Chetumal tiene un boulevard qye discurre por su bahía, en donde podemos apreciar su faro. 
+                        Al transitar sus calles podemos encontrar el Museo de la Cultura Mya, sus mercados o el Palacio de Gobierno, el cual, se conserva su arquitectura original. 
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Título de la Imagen 3</h2>
-            <p>Información detallada sobre la Imagen 3.</p>
-        </div>
-    </div>
-
     <script>
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";
@@ -179,3 +186,5 @@
 
 </body>
 </html>
+
+
