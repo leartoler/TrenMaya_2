@@ -6,39 +6,41 @@
     <title>Mapa Interactivo con Animación Idle</title>
     <style>
         :root{
-    --cap2_c:#4d8b83ff;
-            --cap2_o: #006e62ff;
-            --cap3_c:#c97e56ff;
-            --cap3_o:#ba5328ff;
-            --cap4_c:#a6a698ff;
-            --cap4_o:#898948ff;
-            --cap6_c:#4d9ca6ff;
-            --cap6_o:#00838cff;
-            --cap65_c:#c28786ff;
-            --cap65_o:#992940ff;
-            --cap7_c:#ac5d72ff;
-            --cap7_o:#931a4eff;
-            --cap8_c:#e1bc88ff;
-            --cap8_o:#c7872aff;
-            --cap9_c:#816c8eff;
-            --cap9_o:#5f4471ff;
-            --cap10_c:#6d7ea4ff;
-            --cap10_o:#335d8dff;
-            --cap11_c:#8aa168ff;
-            --cap11_o:#60883bff;
-            --boton_2: #00576E;
-            --boton_3: #BA6E29;
-            --boton_4: #35352D;
-            --boton_5: #123537;
-            --boton_6: #FFC4D0;
-            --boton_7: #3F202E;
-            --boton_8: #725D3E;
-            --boton_9: #BBABC5;
-            --boton_10: #262E37;
-            --boton_11: #C1DCA8;
-            --sm: 14px;
-            --md: 16px;
-            --lg: 18px;
+            --cap1_c:#a6a698ff; /*Puerto Morelos*/
+    --cap1_o:#898948ff; /*Puerto MOrelos*/            
+    --cap2_c:#4d8b83ff; /*Chetumal*/
+    --cap2_o:#006e62ff; /*Chetumal*/
+    --cap3_c:#c97e56ff; /*Bacalar*/
+    --cap3_o:#ba5328ff; /*Bacalar*/
+    --cap4_c:#c28786ff; /*FCP*/
+    --cap4_o:#992940ff; /*FCP*/
+    --cap5_c:#e1bc88ff; /*Limones*/
+    --cap5_o:#c7872aff; /*Limones */
+    --cap6_c:#4d9ca6ff; /*Tulum*/
+    --cap6_o:#00838cff; /*Tulum*/
+    --cap7_c:#ac5d72ff; /*Xpujil*/
+    --cap7_o:#931a4eff; /*Xpujil */
+    --cap8_c:#816c8eff; /*Kohunlich*/
+    --cap8_o:#5f4471ff; /*Kohunlich*/
+    --cap9_c:#8aa168ff; /*Centenario*/
+    --cap9_o:#60883bff; /*Centenario*/
+    --cap10_c:#6d7ea4ff; /*Calakmul*/
+    --cap10_o:#335d8dff; /*CAlakmul*/
+    --front:#53524a;
+    --back:#a2a196;
+    --boton_1:#69498A;
+    --boton_2:#6E2200;
+    --boton_3:#29BAA7;
+    --boton_4:#29993C;
+    --boton_5:#2A83C7;
+    --boton_6:#8C3900;
+    --boton_7:#1B941F;
+    --boton_8:#6A7043;
+    --boton_9:#7F3A87;
+    --boton_10:#8C6C32;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
 }
 
 @font-face 
@@ -63,21 +65,7 @@ p {
     font-family: "AkzidenzGrotesk-Regular";
     font-size: var(--lg);
     margin-bottom: 10px;
-
 }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /* Estilo para cambiar el cursor al pasar sobre los puntos interactivos */
         area {
             cursor: pointer; /* Cambia el cursor a una mano */
@@ -427,7 +415,7 @@ p {
         const rootSyles = getComputedStyle(document.documentElement);
         let backgroundColor;
         if (pageType === "cap1") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap1_o").trim();
         }
         if (pageType === "cap2") {
             backgroundColor = rootSyles.getPropertyValue("--cap2_o").trim();
@@ -436,7 +424,7 @@ p {
             backgroundColor = rootSyles.getPropertyValue("--cap3_o").trim();
         }
         if (pageType === "cap4") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap4_o").trim();
         }
         if (pageType === "cap5") {
             backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
@@ -445,26 +433,18 @@ p {
             backgroundColor = rootSyles.getPropertyValue("--cap6_o").trim();
         }
         if (pageType === "cap7") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap7_o").trim();
         }
         if (pageType === "cap8") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap8_o").trim();
         }
         if (pageType === "cap9") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap9_o").trim();
         }
         if (pageType === "cap10") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
-        }
-        if (pageType === "cap11") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
-        }
-        if (pageType === "cap12") {
-            backgroundColor = rootSyles.getPropertyValue("--cap5_o").trim();
+            backgroundColor = rootSyles.getPropertyValue("--cap10_o").trim();
         }
         popupElement.style.backgroundColor = backgroundColor;
-
-
     </script>
 </body>
 </html>
