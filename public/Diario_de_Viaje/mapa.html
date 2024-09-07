@@ -376,15 +376,41 @@ p {
             let info = '';
             switch(lugar) {
                 case 'Puerto Morelos':
-                    info = 'Bla Bla';
+                    info = 'Pequeño puerto pesquero en la Riviera Maya, conocido por su arrecife de coral, ideal para snorkel y buceo. Tiene un ambiente tranquilo y auténtico en comparación con otros destinos turísticos cercanos.';
                     break;
                 case 'Playa del Carmen':
-                    info = 'Bla Bla.';
+                    info = 'Vibrante destino turístico en la Riviera Maya. Sus playas de arena blanca y su famosa Quinta Avenida, llena de tiendas, restaurantes y bares, lo convierten en un lugar ideal para el entretenimiento y la relajación.';
                     break;
-                // Agregar más casos para otros lugares
-                default:
-                    info = 'Seleccione un lugar para obtener información.';
-            }
+                case "Tulum":
+                    info = "Famoso por sus ruinas mayas frente al mar Caribe. Tulum combina historia, cultura y playas paradisíacas, ofreciendo un entorno único que atrae a viajeros en busca de naturaleza y bienestar.";
+                    break;
+                case "Tulum Aeropuerto":
+                    info = "Famoso por sus ruinas mayas frente al mar Caribe. Tulum combina historia, cultura y playas paradisíacas, ofreciendo un entorno único que atrae a viajeros en busca de naturaleza y bienestar.";
+                    break;
+                case "Felipe Carrillo Puerto":
+                    info = "Ciudad en el corazón de la cultura maya, conocida por su fuerte identidad indígena. Punto de acceso a la Reserva de la Biósfera de Sian Ka'an, Patrimonio de la Humanidad por la UNESCO.";
+                    break;
+                case "Limones":
+                    info = "Pequeño poblado cercano a las ruinas mayas de Chacchoben. Las ruinas destacan por su historia prehispánica y sus imponentes estructuras piramidales rodeadas de selva tropical.";
+                    break;
+                case "Bacalar":
+                    info = "Pueblo mágico famoso por la Laguna de los Siete Colores, cuyas aguas turquesas son perfectas para nadar, hacer kayak y disfrutar de la naturaleza en un entorno relajado y pintoresco.";
+                    break; 
+                case "Chetumal":
+                    info = "Capital del estado de Quintana Roo, ubicada cerca de la frontera con Belice. Ofrece museos, una rica historia maya y un malecón con vistas a la Bahía de Chetumal.";
+                    break;
+                case "Nicolas Bravo":
+                    info = "Pequeña comunidad rural, tranquila y rodeada de naturaleza, ideal para quienes buscan una experiencia fuera de las rutas turísticas tradicionales.";
+                    break;
+                case "Xpujil":
+                    info = "Puerta de entrada a las ruinas mayas de la región de Calakmul. Ideal para explorar sitios arqueológicos menos visitados y disfrutar de la selva.";
+                case "Calakmul":
+                    info = "Importante ciudad maya ubicada en la selva de Campeche. Declarada Patrimonio de la Humanidad, es hogar de impresionantes estructuras y una rica biodiversidad.";
+                    break;
+                case "Centenario":
+                    info = "Zona de actividades rurales, ideal para el ecoturismo y conocer de cerca la vida agrícola en el sureste de México.";
+                    break;
+                }
 
             document.getElementById('popup-content').innerHTML = `<h2>${lugar}</h2><p>${info}</p>`;
             document.getElementById('popup').style.display = 'block';
