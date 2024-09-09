@@ -260,17 +260,18 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 0"
+                        position="0 0 0.5"
                         orbit-controls="
                             autoRotate: false;
                             target: #target3;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:1;
-                            maxDistance:1;">
+                            minDistance:0.07;
+                            maxDistance:0.3;">
                     </a-entity>
-                    <a-entity id="target3"  gltf-model="#obj3" position="0 2 -3"></a-entity>               
+                    <a-entity id="target3"  gltf-model="#obj3" position="0 0 -0.5"></a-entity>    
+                            
                     <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
                     <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
@@ -292,18 +293,18 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 2"
+                        position="0 0 0.5"
                         orbit-controls="
                             autoRotate: false;
                             target: #target;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:3;
-                            maxDistance:40;">
+                            minDistance:0.07;
+                            maxDistance:0.3;">
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj4" position="0 0 0"></a-entity>               
-                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
                     <a-sky color="#006e62"></a-sky>                    
                 </a-scene>
             </div>
