@@ -40,9 +40,9 @@
     --boton_8:#6A7043;
     --boton_9:#7F3A87;
     --boton_10:#8C6C32;
-            --sm: 14px;
-            --md: 16px;
-            --lg: 18px;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
         }
         @font-face 
         {
@@ -61,7 +61,7 @@
             
             margin: 0;
             padding: 0;
-            background-color: var(--cap9_c); /* Color de fondo general */
+            background-color: var(--cap10_c); /* Color de fondo general */
         }
         h2{
             color: whitesmoke;
@@ -74,7 +74,7 @@
             height: 56.25vw; /* Altura de la ventana */
             max-height: 80vh;
             border-radius: 10px;
-            border: 2px solid var(--boton_9); /* Opcional: borde para la ventana */
+            border: 2px solid var(--boton_10); /* Opcional: borde para la ventana */
             overflow: hidden;
         }
         .gallery-container {
@@ -82,7 +82,7 @@
             margin: 50px auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            background-color: var(--cap9_o); /* Color de fondo del contenedor #c8673d */
+            background-color: var(--cap10_o); /* Color de fondo del contenedor #c8673d */
             gap: 10px;
             padding: 20px;
         }
@@ -120,7 +120,7 @@
             visibility: visible;
         }
         .modal-content {
-            background-color: var(--cap9_c); /*Cambir este */
+            background-color: var(--cap10_c);
             padding: 20px;
             border-radius: 10px;
             max-width: 600px;
@@ -128,7 +128,7 @@
             text-align: center;
         }
         .close {
-            color:var(--boton_9); /*Cambiar este*/
+            color:var(--boton_10);
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -144,25 +144,25 @@
 <body>
     <div class="gallery-container">
         <div class="gallery-item" onclick="openModal('modal1')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_09/01.jpg" alt="Imagen 1">  <!--Cambiar este-->
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_10/01.jpg" alt="Imagen 1">
         </div>
         <div class="gallery-item" onclick="openModal('modal2')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_09/02.jpg" alt="Imagen 2"> <!--Cambiar este-->
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_10/02.jpg" alt="Imagen 2">
         </div>
         <div class="gallery-item" onclick="openModal('modal3')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_09/03.jpg" alt="Imagen 3"> <!--Cambiar este-->
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_10/03.jpg" alt="Imagen 3">
         </div>
         <div class="gallery-item" onclick="openModal('modal4')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_09/04.jpg" alt="Imagen 3"> <!--Cambiar este-->
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_10/04.jpg" alt="Imagen 3">
         </div>
         <div class="gallery-item" onclick="openModal('modal5')">
-            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_09/05.jpg" alt="Imagen 3"> <!--Cambiar este-->
+            <img src="https://trenmaya.neocities.org/Imagenes/3d_front/Cap_10/05.jpg" alt="Imagen 3">
         </div>
     </div>
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Figurilla</h2>
+            <h2>Figurine</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -184,16 +184,16 @@
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj1" position="0 -1 -3"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#60883b"></a-sky>    <!--Cambiar este-->                
+                    <a-sky color="#335d8d"></a-sky>            <!--Cambiar este-->          
                 </a-scene>
             </div>
-            <p>Figurilla antropomorfa.</p>
+            <p>Anthropomorphic figure</figure></p>
         </div>
     </div>
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Metate</h2>
+            <h2>Griding tool</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -215,16 +215,16 @@
                     </a-entity>
                     <a-entity id="target2" gltf-model="#obj2" position="0 -2 -3"></a-entity>               
                     <a-entity light="color: white; type: ambient; intensity: -.1" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#60883b"></a-sky>         <!--Cambiar este-->           
+                    <a-sky color="#335d8d"></a-sky>       <!--Cambiar este-->               
                 </a-scene>
             </div>
-            <p>Metate de Basalto</p>
+            <p>Limestone grinding tool</p>
         </div>
     </div>
     <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>Plato</h2>
+            <h2>Plate</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -234,28 +234,28 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 0"
+                        position="0 0 0.5"
                         orbit-controls="
                             autoRotate: false;
                             target: #target3;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:1;
-                            maxDistance:1;">
+                            minDistance:0.07;
+                            maxDistance:0.3;">
                     </a-entity>
-                    <a-entity id="target3"  gltf-model="#obj3" position="0 2 -3"></a-entity>               
+                    <a-entity id="target3"  gltf-model="#obj3" position="0 0 -0.5"></a-entity>    
                     <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#60883b"></a-sky>     <!--Cambiar este-->               
+                    <a-sky color="#335d8d"></a-sky>      <!--Cambiar este-->                
                 </a-scene>
             </div>
-            <p>Plato con motivo zoomorfo</p>
+            <p>Plate with zoomorphic draws</p>
         </div>
     </div>
     <div id="modal4" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <h2>Plato polícromo</h2>
+            <h2>Plato</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -265,28 +265,28 @@
                         id="camera"
                         camera
                         look-controls
-                        position="0 0 2"
+                        position="0 0 0.5"
                         orbit-controls="
                             autoRotate: false;
                             target: #target;
                             enableDamping: true;
                             dampingFactor: 0.125;
                             rotateSpeed:0.08;
-                            minDistance:3;
-                            maxDistance:40;">
+                            minDistance:0.07;
+                            maxDistance:0.3;">
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj4" position="0 0 0"></a-entity>               
-                    <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#60883b"></a-sky>         <!--Cambiar este-->           
+                    <a-entity light="color: #BBB; type: ambient; intensity: .1" data-aframe-default-light="" aframe-injected=""></a-entity>             
+                    <a-sky color="#335d8d"></a-sky>      <!--Cambiar este-->                
                 </a-scene>
             </div>
-            <p>Plato polícromo</p>
+            <p>Plate</p>
         </div>
     </div>
     <div id="modal5" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal5')">&times;</span>
-            <h2>Vasija</h2>
+            <h2>Vessel</h2>
             <div id="aframe-container">              
                 <a-scene gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/" embedded>
                     <a-assets>
@@ -308,10 +308,10 @@
                     </a-entity>
                     <a-entity id="target" gltf-model="#obj5" position="0 0 0"></a-entity>               
                     <a-entity light="color: #BBB; type: ambient; intensity: 3" data-aframe-default-light="" aframe-injected=""></a-entity>             
-                    <a-sky color="#60883b"></a-sky>      <!--Cambiar este-->              
+                    <a-sky color="#335d8d"></a-sky>  <!--Cambiar este-->              
                 </a-scene>
             </div>
-            <p>Vasija de cerámica</p>
+            <p>clay vessel</p>
         </div>
     </div>
     <script>
