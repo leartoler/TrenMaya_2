@@ -16,7 +16,7 @@ vara[0] = new Vara(
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
   [
     {
-      text: "15 Jan 2019",
+      text: "15 enero 1615",
       textAlign: "right",
       y: 20,
       x: -30,
@@ -25,20 +25,23 @@ vara[0] = new Vara(
       fontSize: fontSize.small
     },
     {
-      text: "Start the year with something cool.",
+      text: "Vi la peninsula de yucatan y vi sus grandes selvas",
       y: 40,
       x: posX,
       duration: 4000
     },
+
+
+
+    
     {
-      text: "Like with a library,",
-      id: "sphinx",
+      text: "Vi animales de gran tamaño",
       x: posX,
       delay: 1000,
       duration: 4500
     },
     {
-      text: "..... that can animate text writing",
+      text: "Me sorprendió la cantidad de monumentos vistos ",
       id: "end",
       color: "#3f51b5",
       delay: 1000,
@@ -57,8 +60,8 @@ vara[1] = new Vara(
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
   [
     {
-      text: "16 Jan 2019",
-      textAlign: "right",
+      text: "25 febrero 1700",
+      textAlign: "En la peninsula observé grandes rocas llenas de agua",
       delay: 500,
       y: 20,
       x: -30,
@@ -66,13 +69,13 @@ vara[1] = new Vara(
       fontSize: fontSize.small
     },
     {
-      text: "Try to create something else.",
+      text: "Navegué por mar a tráves de hermosos lagos",
       y: 40,
       x: posX,
       duration: 4000
     },
     {
-      text: "Like a diary or a todo list.",
+      text: "Vi civilizaciones hermosas",
       y: 40,
       x: posX,
       duration: 3500
@@ -87,37 +90,7 @@ vara[1] = new Vara(
 vara[2] = new Vara(
   "#vara-container3",
   "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
-  [
-    {
-      text: "17 Jan 2019",
-      textAlign: "right",
-      delay: 500,
-      y: 20,
-      x: -30,
-      duration: 1500,
-      fontSize: fontSize.small
-    },
-    {
-      text: "Creating a Diary.",
-      y: 40,
-      x: posX,
-      duration: 4000
-    },
-    {
-      text: "View the library on,",
-      y: 20,
-      x: posX,
-      duration: 3500
-    },
-    {
-      text: "Github.",
-      y: 10,
-      color: "#3f51b5",
-      id: "link",
-      x: posX,
-      duration: 1500
-    }
-  ],
+  
   {
     strokeWidth: 2,
     fontSize: fontSize.medium,
