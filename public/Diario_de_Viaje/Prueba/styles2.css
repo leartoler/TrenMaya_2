@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.diario {
+    position: relative;
+    width: 700px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    transform: rotate(-3deg); /* Inclinación general del diario */
+    perspective: 1000px; /* Perspectiva para el efecto 3D */
+}
+
+.pagina {
+    width: 48%; /* Tamaño de cada hoja */
+    height: 100%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transform-origin: left center; /* Origen de la transformación para la página izquierda */
+    transition: transform 0.6s ease; /* Animación de transición suave */
+    backface-visibility: hidden; /* Para ocultar la cara trasera cuando gire */
+}
+
+.izquierda {
+    transform: rotateY(0deg); /* Inicialmente está plana */
+    top: 0;
+    left: 0;
+    z-index: 2; /* Se asegura de estar encima de la derecha */
+    transform-origin: right center; /* Origen para el giro desde la derecha */
+}
+
+.derecha {
+    transform: rotateY(0deg); /* Inicialmente está plana */
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transform-origin: left center; /* Origen para el giro desde la izquierda */
+}
+
+/* Cuando se pasa página */
+.pagina.girada {
+    transform: rotateY(-180deg); /* Gira la página izquierda hacia atrás */
+    z-index: 1;
+}
+
+.pagina.regresa {
+    transform: rotateY(0deg); /* Regresa a su posición original */
+    z-index: 2;
+}
+
+/* Hover animation */
+.pagina:hover {
+    transform: scale(1.05) rotateY(0deg); /* Mantiene la escala al hacer hover */
+}
+
+.contenido {
+    padding: 20px;
+    text-align: center;
+}
