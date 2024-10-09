@@ -130,11 +130,62 @@ h4 {
 	background-size:contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	z-index: 5;
 }
 
 .regla:hover{
 	transform: scale(1.05);
 }
+
+.nota{
+	position: absolute;
+	width: 250px;
+	height: 200px;
+	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/nota.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 6;
+}
+
+.nota:hover{
+	transform: scale(1.05);
+}
+
+.papel{
+	position: absolute;
+	width: 250px;
+	height: 200px;
+	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/papel.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 7;
+}
+
+.papel:hover{
+	transform: scale(1.05);
+}
+
+.gatogordo{
+	position: absolute;
+	width: 250px;
+	height: 200px;
+	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/gatogordo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 8;
+}
+
+.gatogordo:hover{
+	transform: scale(1.05);
+}
+
+
+
+
+
 
 
 
