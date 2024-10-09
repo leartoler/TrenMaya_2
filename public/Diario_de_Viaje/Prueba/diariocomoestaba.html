@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario Interactivo</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="imagen-fondo"></div>
+    <div class="diario">
+        <div class="pagina izquierda" onclick="cambiarPagina(-1)">
+            <!-- Página izquierda (anterior) -->
+            <div class="contenido" id="pagina1">
+                <p>Primera página</p>
+            </div>
+        </div>
+        <div class="pagina derecha" onclick="cambiarPagina(1)">
+            <!-- Página derecha (siguiente) -->
+            <div class="contenido" id="pagina2">
+                <p>Segunda página</p>
+            </div>
+        </div>
+        <div class="pagina izquierda" onclick="cambiarPagina(-1)"></div>
+            <div class="contenido" id="pagina3">
+                <p>Tercera página del diario.</p>
+            </div>
+        </div>
+        <div class="pagina derecha" onclick="cambiarPagina(1)">
+            <div class="contenido" id="pagina4">
+                <p>Cuarta página del diario.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

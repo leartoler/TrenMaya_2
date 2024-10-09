@@ -1,74 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    position: relative;
+	font-family: 'Indie Flower', cursive !important;
+  background-image: url(https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/madera.jpeg); /*CAPE HONEY*/
+	margin: 0px;
+	padding: 0px;
 }
 
-.diario {
-    position: relative;
-    width: 700px;
-    height: 350px;
-    display: flex;
-    justify-content: space-between;
-    margin: 50px auto;
-    transform: rotate(-3deg); /* Inclinación general del diario */
-    perspective: 1000px; /* Perspectiva para el efecto 3D */
+::selection {
+	background: transparent;
 }
 
-.pagina {
-    width: 48%; /* Tamaño de cada hoja */
-    height: 100%;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: absolute;
-    transform-origin: left center; /* Origen de la transformación para la página izquierda */
-    transition: transform 0.6s ease; /* Animación de transición suave */
-    backface-visibility: hidden; /* Para ocultar la cara trasera cuando gire */
+h4 {
+	font-size: 26px;
+	line-height: 1px;
+	font-family: 'Amatic SC', cursive !important;
 }
 
-.izquierda {
-    transform: rotateY(0deg); /* Inicialmente está plana */
-    top: 0;
-    left: 0;
-    z-index: 2; /* Se asegura de estar encima de la derecha */
-    transform-origin: right center; /* Origen para el giro desde la derecha */
+.color1{color:#1BBC9B}/*MOUNTAIN MEADOW*/
+.color2{color:#C0392B/*TALL POPPY*/}
+
+
+.card {
+	color: #013243; /*SHERPA BLUE*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 400px;
+	background: #e0e1dc;
+	transform-style: preserve-3d;
+	transform: translate(-50%,-50%) perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+	transition: 1s;
 }
 
-.derecha {
-    transform: rotateY(0deg); /* Inicialmente está plana */
-    top: 0;
-    right: 0;
-    z-index: 1;
-    transform-origin: left center; /* Origen para el giro desde la izquierda */
+.card:hover {
+	transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
 }
 
-/* Cuando se pasa página */
-.pagina.girada {
-    transform: rotateY(-180deg); /* Gira la página izquierda hacia atrás */
-    z-index: 1;
+.card:before {
+	content:'';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: #BAC1BA;
+	transform-origin: bottom;
+	transform: skewX(-45deg);
 }
 
-.pagina.regresa {
-    transform: rotateY(0deg); /* Regresa a su posición original */
-    z-index: 2;
+.card:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -5px;
+	width: 5px;
+	height: 100%;
+	background: #92A29C;
+	transform-origin: left;
+	transform: skewY(-45deg);
 }
 
-/* Hover animation */
-.pagina:hover {
-    transform: scale(1.05) rotateY(0deg); /* Mantiene la escala al hacer hover */
+.card .imgBox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-origin: left;
+	transition: .7s;
 }
 
-.contenido {
-    padding: 20px;
-    text-align: center;
+.card .bark {
+	position: absolute;
+	background: #e0e1dc;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .7s;
 }
+
+.card .imgBox img {
+	min-width: 250px;
+	max-height: 400px;
+}
+
+.card:hover .imgBox {
+	transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+	opacity: 1;
+	transition: .6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+}
+
+.card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+	z-index: -1;
+	margin-top: 70px;
+}
+
+.card .details p {
+	font-size: 15px;
+	line-height: 5px;
+	transform: rotate(-10deg);
+	padding: 0 0 0 20px;
+}
+
+.card .details h4 {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.regla{
+	position:absolute;
+	width: 250px;
+	height: 50px;
+	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/regla.png");
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.regla:hover{
+	transform: scale(1.05);
+}
+
+
+
