@@ -27,12 +27,12 @@ h4 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 300px;
-	height: 400px;
+	width: 700px; /*este 300*/
+	height: 900px; /* este 400*/
 	background: #e0e1dc;
 	transform-style: preserve-3d;
 	transform: translate(-50%,-50%) perspective(2000px);
-	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+	box-shadow: inset 700px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
 	transition: 1s;
 }
 
@@ -46,8 +46,8 @@ h4 {
 	position: absolute;
 	top: -5px;
 	left: 0;
-	width: 100%;
-	height: 5px;
+	width: 100%; 
+	height: 5px; 
 	background: #BAC1BA;
 	transform-origin: bottom;
 	transform: skewX(-45deg);
@@ -58,16 +58,17 @@ h4 {
 	position: absolute;
 	top: 0;
 	right: -5px;
-	width: 5px;
-	height: 100%;
+	width: 5px; /*ete*/
+	height: 100%; /*este*/
 	background: #92A29C;
 	transform-origin: left;
 	transform: skewY(-45deg);
+	z-index:1;
 }
 
 .card .imgBox {
-	width: 100%;
-	height: 100%;
+	width: 100%; /*este*/
+	height: 100%; /*este*/
 	position: relative;
 	transform-origin: left;
 	transition: .7s;
@@ -83,8 +84,8 @@ h4 {
 }
 
 .card .imgBox img {
-	min-width: 250px;
-	max-height: 400px;
+	min-width: 700px; /*este 250 500*/
+	max-height: 900px; /*este 400 700*/
 }
 
 .card:hover .imgBox {
@@ -94,7 +95,7 @@ h4 {
 .card:hover .bark {
 	opacity: 1;
 	transition: .6s;
-  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset; /*este*/ 
 }
 
 .card .details {
@@ -108,8 +109,8 @@ h4 {
 }
 
 .card .details p {
-	font-size: 15px;
-	line-height: 5px;
+	font-size: 45px; /*15 28*/
+	line-height: 30px; /*5 18*/
 	transform: rotate(-10deg);
 	padding: 0 0 0 20px;
 }
@@ -181,6 +182,11 @@ h4 {
 .gatogordo:hover{
 	transform: scale(1.05);
 }
+
+
+
+
+
 
 
 
