@@ -25,10 +25,10 @@ h4 {
 .card {
 	color: #013243; /*SHERPA BLUE*/
 	position: absolute;
-	top: 35%;
+	width: 500px; 
+	height: 700px;
+	top: 40%;
 	left: 50%;
-	width: 700px; /*este 300*/
-	height: 900px; /* este 400*/
 	background: #e0e1dc;
 	transform-style: preserve-3d;
 	transform: translate(-50%,-50%) perspective(2000px);
@@ -84,8 +84,10 @@ h4 {
 }
 
 .card .imgBox img {
-	min-width: 700px; /*este 250 500*/
-	max-height: 900px; /*este 400 700*/
+	min-width: 50px; 
+	max-height: 70px; 
+
+
 }
 
 .card:hover .imgBox {
@@ -125,6 +127,8 @@ h4 {
 
 .regla{
 	position:absolute;
+	left: 25%;
+	top: 1%;
 	width: 700px;
 	height: 100px;
 	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/regla.png");
@@ -140,6 +144,8 @@ h4 {
 
 .nota{
 	position: absolute;
+	left: 60%;
+	top: 75%;
 	width: 350px;
 	height: 300px;
 	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/nota.png");
@@ -155,6 +161,8 @@ h4 {
 
 .papel{
 	position: absolute;
+	left: 5%;
+	top: 70%;
 	width: 550px;
 	height: 500px;
 	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/papel.png");
@@ -171,6 +179,8 @@ h4 {
 
 .gatogordo{
 	position: absolute;
+	left: 35%;
+	top: 81%;
 	width: 350px;
 	height: 300px;
 	background-image: url("https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/gatogordo.png");
@@ -184,13 +194,22 @@ h4 {
 	transform: scale(1.05);
 }
 
-@media screen and (max-width:800px) {
-	.card .imgBox img{
-		height: 300px;
-		width: 400px;
+@media screen and (min-width:400px){
+	.card{
+	height: 50px;
+	width: 70px;
 	}
-	
 }
+
+@media screen and (min-width:800px) {
+	.card{
+		height: 500px;
+		width: 700px;
+	}
+}
+
+	
+
 
 
 	

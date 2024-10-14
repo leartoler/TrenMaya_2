@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+	font-family: 'Indie Flower', cursive !important;
+    background-image: url(https://trenmaya.neocities.org/Diario_de_Viaje/Prueba/madera.jpeg);
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+	font-size: 2rem; /* TAMAÑO RELATIVO */
+	line-height: 1.2;
+	font-family: 'Amatic SC', cursive !important;
+}
+
+.color1 { color: #1BBC9B; }
+.color2 { color: #C0392B; }
+
+.card {
+	color: #013243;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 900vw;  /* UNIDAD RELATIVA */
+	height: 600vh;  /* UNIDAD RELATIVA */
+	background: #e0e1dc;
+	transform-style: preserve-3d;
+	transform: translate(-50%, -50%) perspective(1500px);
+	box-shadow: inset 50px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+	transition: 1s;
+}
+
+.card:hover {
+	transform: translate(-50%, -50%) perspective(1500px) rotate(10deg) scale(1.1);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.card .imgBox img {
+	width: 100%;
+	height: auto;
+}
+
+/* Media Queries para diferentes dispositivos */
+
+/* Celulares - Pantallas pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+    
+    .card .details p {
+        font-size: 1rem;
+    }
+}
+
+/* Tabletas - Pantallas medianas como iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 70vw;
+        height: 60vh;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+    
+    .card .details p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop - Pantallas grandes */
+@media (min-width: 1024px) {
+    .card {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    
+
+    h4 {
+        font-size: 2.5rem;
+    }
+    
+    .card .details p {
+        font-size: 2rem;
+    }
+}
+
