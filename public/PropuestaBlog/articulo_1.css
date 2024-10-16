@@ -195,7 +195,7 @@
 	background-color: var(--color_base);
 	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23282724' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 	content: "";
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 0;
 	left: 0;
 	z-index: 0;
@@ -229,12 +229,18 @@
 	.o-media__caption {
 	  margin-bottom: var(--gap_half);
 	}
+
+
+
   }
   @media screen and (min-width: 40.625rem) {
+
+	
+	
 	.o-media__caption {
 	  font-size: 1rem;
 	}
-  }
+  
   .o-media__legend {
 	border-bottom: var(--border_sm) solid var(--color_ink);
 	font-family: "Open Sans", sans-serif;
@@ -258,3 +264,4 @@
 	opacity: 0.2;
 	word-break: break-all;
   }
+}
