@@ -140,7 +140,13 @@
 	border-right: var(--border_sm) solid var(--color_ink);
 	display: grid;
 	grid-template: auto/var(--gap) repeat(2, 1fr) minmax(var(--minmax), 1fr) var(--gap);
-	grid-template-areas: ". header header header ." ". subheader subheader subheader ." ". profile profile profile ." ". content content content ." ". work-sample work-sample work-sample ." ". footer footer footer .";
+	grid-template-areas: ". header header header ." 
+						 ". subheader subheader subheader ." 
+						 ". profile profile profile ." 
+						 ". content content content ." 
+						 ". work-sample work-sample work-sample ." 
+						 ". profile profile profile"
+						 ". footer footer footer .";
 	grid-column-gap: var(--gap);
 	grid-row-gap: var(--gap_half);
 	margin: 0 auto;

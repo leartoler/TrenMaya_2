@@ -71,27 +71,30 @@
 	letter-spacing: 0.2rem;
   }
   .c-heading--01 {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	line-height: 1.1;
-	margin-top: -1.8rem;
+
   }
   @media screen and (min-width: 32.5rem) {
 	.c-heading--01 {
-	  font-size: 2rem;
+	  font-size: 7rem;
 	}
   }
   @media screen and (min-width: 40.625rem) {
 	.c-heading--01 {
-	  font-size: 2rem;
-	  margin-top:rem;
+	  font-size: 2.5rem;
+	  
 	}
   }
   .c-heading--02 {
-	font-size: 1rem;
+	font-size: .6rem;
 	line-height: 1.7;
+	text-align: right;
+	margin-top: .5rem;
   }
   .c-heading--03 {
-	font-size: 1.5rem;
+	font-size: .6rem;
+	text-align: right;
 	line-height: 1.2;
 	margin-top: calc(var(--gap_half) / -2);
 	margin-bottom: calc(var(--gap_half) / 2);
@@ -135,7 +138,12 @@
 	border-right: var(--border_sm) solid var(--color_ink);
 	display: grid;
 	grid-template: auto/var(--gap) repeat(2, 1fr) minmax(var(--minmax), 1fr) var(--gap);
-	grid-template-areas: ". header header header ." ". subheader subheader subheader ." ". content content profile ." ". work-sample work-sample profile ." ". footer footer footer .";
+	grid-template-areas: ". header header header ." 
+						". subheader subheader subheader ." 						
+						". content content content ." 
+						". profile profile profile ." 
+						". work-sample work-sample work-sample ." 
+						". footer footer footer .";
 	grid-column-gap: var(--gap);
 	grid-row-gap: var(--gap_half);
 	margin: 0 auto;
@@ -144,12 +152,7 @@
   @media screen and (min-width: 40.625rem) {
 	.o-grid {
 	  --minmax: 15rem;
-	  grid-template-areas: ". header header header ." 
-	  					   ". subheader subheader subheader ." 
-						   ". content content content ." 
-						   ". work-sample work-sample work-sample ."
-						   ". profile profile profile ." 
-						   ". footer footer footer .";
+	  grid-template-areas: ". header header header ." ". subheader subheader subheader ." ". content content profile ." ". work-sample work-sample profile ." ". footer footer footer .";
 	}
   }
   .o-grid__area-01 {
@@ -226,7 +229,7 @@
   }
   .o-media__caption {
 	font-family: "Open Sans", sans-serif;
-	font-size: 1.2rem;
+	font-size: .8rem;
 	line-height: 1.5;
 	margin-bottom: var(--gap);
   }
@@ -259,6 +262,7 @@
 	margin: var(--gap_half) 0;
   }
   .o-footer p {
+	font-size: .7rem;
 	line-height: 1.3;
 	opacity: 0.2;
 	word-break: break-all;
