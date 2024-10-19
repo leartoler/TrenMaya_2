@@ -54,13 +54,6 @@ html {
     width: device-width
 }
 
-article,
-aside,
-dialog,
-figcaption,
-figure,
-footer,
-header,
 hgroup,
 main,
 nav,
@@ -75,8 +68,8 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    text-align: left;
-    background-color: #fff
+    text-align: center;
+    background-color: #A7BF8F
 }
 
 [tabindex="-1"]:focus {
@@ -390,7 +383,7 @@ h6 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: inherit
+    color: #fff
 }
 
 .h1,
@@ -431,7 +424,8 @@ h6 {
 .display-1 {
     font-size: 3rem;
     font-weight: 300;
-    line-height: 1.2
+    line-height: 1.2;
+    font-family: "Bebas Neue", serif
 }
 
 .display-2 {
@@ -720,7 +714,8 @@ pre code {
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px
+    padding-left: 15px;
+    padding-bottom: 15px;
 }
 
 .col {
@@ -4864,7 +4859,7 @@ tbody.collapse.show {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #59733F;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem
@@ -6673,7 +6668,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #343a40 !important
+    background-color: #284010 !important
 }
 
 a.bg-dark:focus,
@@ -8068,8 +8063,15 @@ button.bg-dark:hover {
 }
 
 .w-100 {
-    width: 100% !important
+    width: 70% !important
 }
+
+@media screen and (max-width: 380px) {
+    .w-100{
+        width: 100% !important;
+    }
+}
+
 
 .h-25 {
     height: 25% !important

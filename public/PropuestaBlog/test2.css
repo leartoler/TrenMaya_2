@@ -1,9 +1,9 @@
 :root {
-	--color_base: #FFF;
-	--color_mag: #FFCDD2;
+	--color_base: #798C79;
+	--color_mag: #C5D9C7;
 	--color_ink: #282724;
 	--color_highlight: #FFFF00;
-	--magazine: 56rem;
+	--magazine: 70rem;
 	--mag_col: 12rem;
 	--gap: 1.25rem;
 	--gap_half: calc(var(--gap) / 2);
