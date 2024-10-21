@@ -69,7 +69,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: center;
-    background-color: #A7BF8F
+    background-color: #C5D9C7
 }
 
 [tabindex="-1"]:focus {
@@ -94,7 +94,8 @@ h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    font-family: "Aleo", serif
 }
 
 abbr[data-original-title],
@@ -169,7 +170,8 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: #4D594F;
+    font-weight: bold;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
@@ -230,7 +232,7 @@ table {
 caption {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    color: #6c757d;
+    color: #798C79;
     text-align: left;
     caption-side: bottom
 }
@@ -383,7 +385,7 @@ h6 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: #fff
+    
 }
 
 .h1,
@@ -393,7 +395,8 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 2rem
+    font-size: 2rem;
+    color: #4D594F
 }
 
 .h3,
@@ -408,7 +411,10 @@ h4 {
 
 .h5,
 h5 {
-    font-size: 1.25rem
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #C5D9C7
 }
 
 .h6,
@@ -2756,6 +2762,7 @@ select.form-control-lg:not([size]):not([multiple]) {
 
 .btn {
     display: inline-block;
+    background-color: #C5D9C7;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
@@ -2771,6 +2778,13 @@ select.form-control-lg:not([size]):not([multiple]) {
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
+
+@media screen and (max-width: 360px) {
+    .btn{
+        margin-top: 10px;
+    }
+}
+
 
 .btn:focus,
 .btn:hover {
@@ -4859,7 +4873,7 @@ tbody.collapse.show {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #59733F;
+    background-color: #798C79;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem
@@ -4920,6 +4934,7 @@ tbody.collapse.show {
     position:relative;
     width: 95%;
     height: 95%;
+    padding: 5px;
     
 }
 
@@ -6668,7 +6683,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #284010 !important
+    background-color: #4D594F !important
 }
 
 a.bg-dark:focus,
@@ -9951,6 +9966,13 @@ a.text-dark:hover {
     .table-bordered td,
     .table-bordered th {
         border: 1px solid #ddd !important
+    }
+
+    .footer{
+        font-size: .7rem;
+        line-height: 1.3;
+        opacity: 0.2;
+        word-break: break-all;
     }
 }
 
